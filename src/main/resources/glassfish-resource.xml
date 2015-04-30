@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+  <admin-object-resource enabled="true" jndi-name="jms/testJmsQueue" res-type="javax.jms.Queue"  res-adapter="jmsra">
+    <property name="Name" value="testJms"/>
+  </admin-object-resource>
+  <connector-connection-pool name="jms/testJmsFactoryPool" connection-definition-name="javax.jms.ConnectionFactory" resource-adapter-name="jmsra"/>
+  <connector-resource enabled="true" jndi-name="jms/testJmsFactory" pool-name="jms/testJmsFactoryPool"/>
+</resources>
