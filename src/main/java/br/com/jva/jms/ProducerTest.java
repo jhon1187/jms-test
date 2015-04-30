@@ -1,9 +1,7 @@
 package br.com.jva.jms;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.ejb.Singleton;
-import javax.ejb.Startup;
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
 import javax.jms.MessageProducer;
@@ -12,7 +10,6 @@ import javax.jms.Queue;
 import javax.jms.Session;
 
 @Singleton
-@Startup
 public class ProducerTest {
 
 	@Resource(mappedName = "jms/testJmsFactory")
@@ -42,11 +39,4 @@ public class ProducerTest {
 		}
 	}
 
-	@PostConstruct
-	public void produzirMensagem() {
-		for (int i = 0; i < 5; i++) {
-			System.out.println("Enviando mensagem [" + i + "]");
-			enviarMensagem("Message [" + i + "]");
-		}
-	}
 }

@@ -1,16 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>br.com.jva</groupId>
 	<artifactId>jms-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>jms-test</name>
 	<packaging>war</packaging>
+	<url>http://maven.apache.org</url>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
 			<artifactId>javax.ws.rs-api</artifactId>
@@ -90,10 +88,10 @@
 			<version>2.10.1</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
+		<finalName>jms-test</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

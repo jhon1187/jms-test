@@ -20,3 +20,5 @@ Antes de executar qualquer exemplo é necessario:
 </lu>
 
 2 - Implantar a aplicação no servidor de aplicação Glassfish4 ou superior.
+
+3 - Inicialmente já será enviada uma sequência de mensagens, para enviar novamente basta acessar a URL: http://localhost:8080/jms-test/sendMessage
